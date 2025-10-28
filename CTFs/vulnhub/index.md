@@ -4,6 +4,7 @@ Machines can be downloaded from [vulnhub](https://www.vulnhub.com/).
 
 ## Goal of These Walkthroughs
 The primary objective of these walkthroughs is to sharpen pentesting skills. It is crucial to obtain root access as swiftly as possible, akin to executing a Real-Time Attack. The walkthroughs serve as simplified penetration testing reports. It is essential to ensure that each walkthrough includes:
+
 1. Path to Grant Root Access
    - This section should detail the specific steps required to obtain root access, emphasizing clarity and accuracy.
 2. Vulnerabilities and Risks Classified by Severity
