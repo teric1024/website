@@ -1,0 +1,724 @@
+# Vulnhub Writeups
+
+Machines can be downloaded from [vulnhub](https://www.vulnhub.com/).
+
+## Goal of These Walkthroughs
+The primary objective of these walkthroughs is to sharpen pentesting skills. It is crucial to obtain root access as swiftly as possible, akin to executing a Real-Time Attack. The walkthroughs serve as simplified penetration testing reports. It is essential to ensure that each walkthrough includes:
+1. Path to Grant Root Access
+   - This section should detail the specific steps required to obtain root access, emphasizing clarity and accuracy.
+2. Vulnerabilities and Risks Classified by Severity
+   - Vulnerabilities should be identified and categorized based on their severity level.
+3. Evidence of Each Vulnerability and Risk
+   - Evidence should be provided to convincingly demonstrate that the specific vulnerability exists.
+
+
+## Index
+- [ ] Badstore: 1.2.3
+- [ ] UltimateLAMP: 0.2
+- [ ] Damn Vulnerable Linux (DVL): 1.0
+- [ ] De-ICE: S1.100
+- [ ] Damn Vulnerable Linux (DVL): 1.1 (Blackhat Edition)
+- [ ] De-ICE: S1.110
+- [ ] Damn Vulnerable Linux (DVL): 1.2 (Strychnine)
+- [ ] Damn Vulnerable Linux (DVL): 1.3 (E605)
+- [ ] De-ICE: S2.100
+- [ ] Damn Vulnerable Linux (DVL): 1.4 (Strychnine & E605)
+- [ ] pWnOS: 1.0
+- [ ] Damn Vulnerable Linux (DVL): 1.5 (Infectious Disease)
+- [ ] LAMPSecurity: CTF4
+- [ ] Moth: 0.6
+- [ ] LAMPSecurity: CTF5
+- [ ] GoatseLinux: 1
+- [ ] LAMPSecurity: CTF6
+- [ ] De-ICE: S1.123 (Hackerdemia)
+- [ ] Vicnum: 1.3
+- [ ] Vicnum: 1.4
+- [ ] Kioptrix: Level 1 (#1)
+- [ ] Metasploitable: 1
+- [ ] Holynix: v1
+- [ ] Holynix: v2
+- [ ] VulnImage: 1
+- [ ] Kioptrix: Level 1.1 (#2)
+- [ ] De-ICE: S1.130
+- [ ] De-ICE: S1.120
+- [ ] Rattus: Loophole
+- [ ] Kioptrix: Level 1.2 (#3)
+- [ ] pWnOS: 2.0 (Pre-Release)
+- [ ] Hackademic: RTB2
+- [ ] Hackademic: RTB1
+- [ ] Damn Vulnerable Web Application (DVWA): 1.0.7
+- [ ] Exploit-Exercises: Protostar (v2)
+- [ ] Exploit-Exercises: Nebula (v5)
+- [ ] Bobby: 1
+- [ ] Kioptrix: Level 1.3 (#4)
+- [ ] Drunk Admin Web Hacking Challenge: 1
+- [ ] The Hacker Games: 1
+- [ ] Exploit-Exercises: Fusion (v2)
+- [ ] Pentester Lab: PHP Include And Post Exploitation
+- [ ] Pentester Lab: CVE-2012-1823: PHP CGI
+- [ ] Lab In A Box: 1
+- [ ] Pentester Lab: CVE-2012-2661: ActiveRecord SQL injection
+- [ ] Metasploitable: 2
+- [ ] GameOver: 1
+- [ ] 21LTR: Scene 1
+- [ ] Web Security Dojo: 2
+- [ ] HackLAB: Vulnix
+- [ ] Pentester Lab: From SQL injection to Shell
+- [ ] Pentester Lab: Rack Cookies and Commands Injection
+- [ ] Hackxor: 1
+- [ ] Pentester Lab: Introduction to Linux Host Review
+- [ ] HackLAB: VulnVoIP
+- [ ] /dev/random: scream
+- [ ] Pentester Lab: From SQL injection to Shell: PostgreSQL edition
+- [ ] Pentester Lab: CVE-2008-1930: Wordpress 2.5 Cookie Integrity Protection Vulnerability
+- [ ] LAMPSecurity: CTF7
+- [ ] Pentester Lab: Axis2 Web service and Tomcat Manager
+- [ ] Exploit KB Vulnerable Web App: 1
+- [ ] Exploit-Exercises: Mainsequence (v1)
+- [ ] HackLAB: VulnVPN
+- [ ] Brainpan: 1
+- [ ] Pentester Lab: Web For Pentester
+- [ ] Pentester Lab: CVE-2012-6081: MoinMoin code exec
+- [ ] LAMPSecurity: CTF8
+- [ ] Pentester Lab: From SQL injection to Shell II
+- [ ] Bot Challenges: RA1NXing Bots
+- [ ] Pentester Lab: Web For Pentester II
+- [ ] Bot Challenges: Flipping Bitbot
+- [ ] No Exploiting Me: 1
+- [ ] De-ICE: S1.140
+- [ ] /dev/random: relativity (v1.0.1)
+- [ ] Pentester Lab: Electronic CodeBook (ECB)
+- [ ] Brainpan: 2
+- [ ] xerxes: 1
+- [ ] Pentester Lab: XSS and MySQL FILE
+- [ ] VulnOS: 1
+- [ ] Bot Challenges: Dexter
+- [ ] Kioptrix: 2014 (#5)
+- [ ] Command Injection ISO: 1
+- [ ] Pentester Lab: CVE-2007-1860: mod_jk double-decoding
+- [ ] SecOS: 1
+- [ ] CySCA: CySCA2014-in-a-Box
+- [ ] Bot Challenges: LoBOTomy
+- [ ] The Infernal: Hades (v1.0.1)
+- [ ] SkyTower: 1
+- [ ] Hell: 1
+- [ ] Pentester Lab: Play Session Injection
+- [ ] xerxes: 2.0.1
+- [ ] Morning Catch: Phishing Industries
+- [ ] Flick: 1
+- [ ] Tr0ll: 1
+- [ ] OwlNest: 1.0.2
+- [ ] Persistence: 1
+- [ ] Pentester Lab: CVE-2014-6271: ShellShock
+- [ ] Knock-Knock: 1.1
+- [ ] Kvasir: I
+- [ ] Tr0ll: 2
+- [ ] bWAPP: bee-box (v1.6)
+- [ ] Underdist: 3
+- [ ] Pegasus: 1
+- [ ] The Purge: 1
+- [ ] Pandora's Box: 1
+- [ ] The Frequency: 1
+- [ ] Sokar: 1
+- [ ] TopHatSec: Freshly
+- [ ] TopHatSec: ZorZ
+- [ ] TopHatSec: FartKnocker
+- [ ] Pentester Lab: Play XML Entities
+- [ ] Darknet: 1.0
+- [ ] ROP Primer: 0.2
+- [ ] Brainpan: 3
+- [ ] NullByte: 1
+- [ ] OWASP Broken Web Applications Project: 1.2
+- [ ] Acid: Server
+- [ ] Flick: 2
+- [ ] Acid: Reloaded
+- [ ] SpyderSec: Challenge
+- [ ] Lord Of The Root: 1.0.1
+- [ ] /dev/random: Pipe
+- [ ] /dev/random: Sleepy
+- [ ] SecTalks: BNE0x03 - Simple
+- [ ] SecTalks: BNE0x02 - Fuku
+- [ ] SecTalks: BNE0x00 - Minotaur
+- [ ] SkyDog: 1
+- [ ] The Wall: 1
+- [ ] SickOs: 1.1
+- [ ] FristiLeaks: 1.3
+- [ ] Csharp: VulnSoap
+- [ ] Csharp: VulnJson
+- [ ] PRIMER: 1.0.1
+- [ ] Kevgir: 1
+- [ ] SmashTheTux: 1.0.1
+- [ ] Droopy: v0.2
+- [ ] SickOs: 1.2
+- [ ] Gibson: 0.2
+- [ ] VulnOS: 2
+- [ ] Milnet: 1
+- [ ] Sidney: 0.2
+- [ ] Stapler: 1
+- [ ] Mr-Robot: 1
+- [ ] Breach: 1
+- [ ] The Pentesters: 64-Bit AppSec Primer (Beta)
+- [ ] Violator: 1
+- [ ] The Necromancer: 1
+- [ ] 6Days Lab: 1.1
+- [ ] Tommy Boy: 1
+- [ ] PwnLab: init
+- [ ] Breach: 2.1
+- [ ] Billy Madison: 1.1
+- [ ] Seattle: v0.3
+- [ ] IMF: 1
+- [ ] Teuchter: 0.3
+- [ ] NETinVM: November 3, 2016
+- [ ] SkyDog: 2016 - Catch Me If You Can
+- [ ] HackDay: Albania
+- [ ] DC416: 2016
+- [ ] 64Base: 1.0.1
+- [ ] USV: 2016 (v1.0.1)
+- [ ] Pentester Lab: Padding Oracle
+- [ ] Wallaby's: Nightmare (v1.0.2)
+- [ ] Breach: 3.0.1
+- [ ] pluck: 1
+- [ ] Defence Space CTF: 2017
+- [ ] hackfest2016: Quaoar
+- [ ] hackfest2016: Sedna
+- [ ] hackfest2016: Orcus
+- [ ] Thr0nes CTF: 1
+- [ ] Ew_Skuzzy: 1
+- [ ] Analougepond: 1
+- [ ] Super Mario Host: 1.0.1
+- [ ] billu: b0x
+- [ ] DonkeyDocker: 1
+- [ ] d0not5top: 1.2
+- [ ] Moria: 1.1
+- [ ] MMMLAGOS: 1.1
+- [ ] DEFCON Toronto: Galahad
+- [ ] HackerHouse: BSides London 2017
+- [ ] Proteus: 1
+- [ ] BTRSys: v1
+- [ ] Born2Root: 1
+- [ ] zico2: 1
+- [ ] Lab26: 1.1
+- [ ] /dev/random: k2
+- [ ] BTRSys: v2.1
+- [ ] Xtreme Vulnerable Web Application (XVWA): 1
+- [ ] Bulldog: 1
+- [ ] Game of Thrones CTF: 1
+- [ ] H.A.S.T.E: 1
+- [ ] Pentester Lab: S2-052
+- [ ] covfefe: 1
+- [ ] LazySysAdmin: 1
+- [ ] RickdiculouslyEasy: 1
+- [ ] C0m80: 1
+- [ ] Vulnerable Docker: 1
+- [ ] Dina: 1.0.1
+- [ ] Depth: 1
+- [ ] The Ether: EvilScience (v1.0.1)
+- [ ] g0rmint: 1
+- [ ] ARM Lab: 1
+- [ ] Homeless: 1
+- [ ] Basic Pentesting: 1
+- [ ] Cyberry: 1
+- [ ] USV: 2017
+- [ ] Gemini Inc: 1
+- [ ] Damn Vulnerable ARM Router (DVAR): tinysploitARM
+- [ ] W1R3S: 1.0.1
+- [ ] DerpNStink: 1
+- [ ] Nineveh: v0.3
+- [ ] BlackMarket: 1
+- [ ] Pinky's Palace: v1
+- [ ] JIS-CTF: VulnUpload
+- [ ] Bob: 1.0.1
+- [ ] Pinky's Palace: v2
+- [ ] BSides Vancouver: 2018 (Workshop)
+- [ ] Trollcave: 1.2
+- [ ] Jarbas: 1
+- [ ] Android4: 1
+- [ ] Gemini Inc: 2
+- [ ] MinU: 1
+- [ ] GoldenEye: 1
+- [ ] FourAndSix: 1
+- [ ] Pinky's Palace: v3
+- [ ] Temple of Doom: 1
+- [ ] Blacklight: 1
+- [ ] billu: b0x 2
+- [ ] WebSploit2018: 1
+- [ ] WinterMute: 1
+- [ ] Basic Pentesting: 2
+- [ ] Lin.Security: 1
+- [ ] Toppo: 1
+- [ ] Bulldog: 2
+- [ ] BSidesTLV: 2018 CTF
+- [ ] Lampião: 1
+- [ ] Rotating Fortress: 1.0.1
+- [ ] ch4inrulz: 1.0.1
+- [ ] wakanda: 1
+- [ ] Node: 1
+- [ ] XXE Lab: 1
+- [ ] Chatty: 1 & 2 (v5)
+- [ ] W34kn3ss: 1
+- [ ] Raven: 1
+- [ ] RSA: 1
+- [ ] Matrix: 1
+- [ ] CTF KFIOFan: 1
+- [ ] SolidState: 1
+- [ ] Fowsniff: 1
+- [ ] Moonraker: 1
+- [ ] Pinky's Palace: v4
+- [ ] Gittysburg: 1
+- [ ] FourAndSix: 2.01
+- [ ] Typhoon: 1.02
+- [ ] myHouse7: 1
+- [ ] Web Developer: 1
+- [ ] Raven: 2
+- [ ] RootThis: 1
+- [ ] SP: jenkins
+- [ ] SP: ike (v1.0.1)
+- [ ] SP: eric
+- [ ] SP: christophe (v1.0.2)
+- [ ] Replay: 1
+- [ ] Kuya: 1
+- [ ] Matrix: 2
+- [ ] digitalworld.local: BRAVERY
+- [ ] digitalworld.local: DEVELOPMENT
+- [ ] digitalworld.local: MERCY v2
+- [ ] NorzhCTF: 2019 (Basilic)
+- [ ] MEA-CTF: 1
+- [ ] The Beast: 2
+- [ ] Casino Royale: 1
+- [ ] DC: 1
+- [ ] Born2Root: 2
+- [ ] HappyCorp: 1
+- [ ] HackInOS: 1
+- [ ] unknowndevice64: 1
+- [ ] DC: 2
+- [ ] unknowndevice64: 2
+- [ ] digitalworld.local: TORMENT
+- [ ] digitalworld.local: JOY
+- [ ] Overflow: 1
+- [ ] Sputnik: 1
+- [ ] DC: 4
+- [ ] SP: harrison
+- [ ] Zeus: 1
+- [ ] DC: 5
+- [ ] Cybero: 1
+- [ ] DC: 6
+- [ ] Silky-CTF: 0x02
+- [ ] Silky-CTF: 0x01
+- [ ] A Get A Post: 1
+- [ ] jigsaw: 1
+- [ ] CSRF Minefield: 1
+- [ ] Oz: 1
+- [ ] CTF KFIOFan: 2
+- [ ] 2much: 1
+- [ ] Stack Overflows for Beginners: 1.0.1
+- [ ] SP: jerome (v1.0.1)
+- [ ] Mission-Pumpkin v1.0: PumpkinGarden
+- [ ] symfonos: 1
+- [ ] Escalate_Linux: 1
+- [ ] Mission-Pumpkin v1.0: PumpkinRaising
+- [ ] Matrix: 3
+- [ ] DomDom: 1
+- [ ] CLAMP: 1.0.1
+- [ ] Ted: 1
+- [ ] Mission-Pumpkin v1.0: PumpkinFestival
+- [ ] MinU: v2
+- [ ] symfonos: 2
+- [ ] hackme: 1
+- [ ] The Library: 1
+- [ ] The Library: 2
+- [ ] ReadMe: 1
+- [ ] jigsaw: 2
+- [ ] sunset: 1
+- [ ] WestWild: 1.1
+- [ ] sunset: dawn
+- [ ] dpwwn: 1
+- [ ] Tr0ll: 3
+- [ ] dpwwn: 2
+- [ ] Broken: Gallery
+- [ ] dpwwn: 3
+- [ ] Tempus Fugit: 1
+- [ ] GrimTheRipper: 1
+- [ ] serial: 1
+- [ ] symfonos: 4
+- [ ] AI: Web: 1
+- [ ] nezuko: 1
+- [ ] scarecrow: 1.1
+- [ ] sunset: nightfall
+- [ ] DC: 7
+- [ ] Prime: 1
+- [ ] AI: Web: 2
+- [ ] The Fortress: 1
+- [ ] DC: 8
+- [ ] Tempus Fugit: 2
+- [ ] HA: Wordy
+- [ ] HA: Infinity Stones
+- [ ] WebGOAT: 1
+- [ ] HA: Avengers Arsenal
+- [ ] SP: leopold (v1.2)
+- [ ] HA: Armour
+- [ ] Misdirection: 1
+- [ ] Mumbai: 1
+- [ ] serial: 2
+- [ ] bossplayersCTF: 1
+- [ ] Bottleneck: 1
+- [ ] HA: ISRO
+- [ ] SafeHarbor: 1
+- [ ] Hacker Fest: 2019
+- [ ] SiXeS: 1
+- [ ] HA: Joker
+- [ ] HA: Naruto
+- [ ] Bob's Missing Cat CTF: 1.1
+- [ ] Gears of War: EP#1
+- [ ] Mortal Kombat: 1
+- [ ] Connect The Dots: 1
+- [ ] HA: Rudra
+- [ ] View2aKill: 1
+- [ ] HA: Chakravyuh
+- [ ] hackNos: Os-Hax
+- [ ] EVM: 1
+- [ ] hackNos: Os-Bytesec
+- [ ] HA: Dhanush
+- [ ] HA: Chanakya
+- [ ] djinn: 1
+- [ ] CyNix: 1
+- [ ] WTF: 1
+- [ ] Tempus Fugit: 3
+- [ ] hackNos: Os-hackNos
+- [ ] FSoft Challenges VM: 1
+- [ ] hackNos: Os-hackNos-2.1
+- [ ] sunset: dusk
+- [ ] In Plain Sight: 1.0.1
+- [ ] UA: Literally Vulnerable
+- [ ] sunset: sunrise
+- [ ] MyExpense: 1
+- [ ] Me and My Girlfriend: 1
+- [ ] hackNos: Os-hackNos-3
+- [ ] Secret Hacker: Vulnerable Web Application Server
+- [ ] DC: 9
+- [ ] Doomsday: 1
+- [ ] EnuBox: Mattermost
+- [ ] Mordor: 1.1
+- [ ] five86: 1
+- [ ] five86: 2
+- [ ] aqua: 1
+- [ ] hackNos: ReconForce (v1.1)
+- [ ] djinn: 2
+- [ ] inclusiveness: 1
+- [ ] Tempus Fugit: 4
+- [ ] haclabs: no_name
+- [ ] haclabs: Deception
+- [ ] Sar: 1
+- [ ] sunset: dawn2
+- [ ] Swimmer: 1.1
+- [ ] My File Server: 1
+- [ ] MuzzyBox: 1
+- [ ] symfonos: 5.2
+- [ ] sahu: 1.1
+- [ ] TBBT: FunWithFlags
+- [ ] oreo: 1
+- [ ] sunset: dawn3
+- [ ] recon: 1
+- [ ] haclabs: deception1.1
+- [ ] VulnUni: 1.0.1
+- [ ] My File Server: 2
+- [ ] CK: 00
+- [ ] InfoSecWarrior CTF 2020: 02
+- [ ] InfoSecWarrior CTF 2020: 01
+- [ ] InfoSecWarrior CTF 2020: 03
+- [ ] Escalate My Privileges: 1
+- [ ] VulnPire : 1
+- [ ] DevRandom CTF: 1.1
+- [ ] Wordpress Host Server: 1
+- [ ] BoredHackerBlog: Moriarty Corp
+- [ ] BoredHackerBlog: Social Network 2.0
+- [ ] BoredHackerBlog: Social Network
+- [ ] BoredHackerBlog: Cloud AV
+- [ ] maskcrafter: 1.1
+- [ ] SecKC: 1.1
+- [ ] My Tomcat Host: 1
+- [ ] Tempus Fugit: 5.2
+- [ ] symfonos: 6.1
+- [ ] symfonos: 3.1
+- [ ] It’s October: 1
+- [ ] TBBT: 2 - FunWithFlags
+- [ ] hackNos: Player v1.1
+- [ ] DMV: 1
+- [ ] CK: 03
+- [ ] My Web Server: 1
+- [ ] 42Challenge: 1
+- [ ] Minouche: 1
+- [ ] CryptoBank: 1
+- [ ] Stripes: 1
+- [ ] Broken-2020: 1
+- [ ] mhz_cxf: c1f
+- [ ] Victim: 1
+- [ ] Typo: 1
+- [ ] DC: 3.2
+- [ ] LemonSqueezy: 1
+- [ ] DMV: 2
+- [ ] My Communication Server: 1
+- [ ] CengBox: 1
+- [ ] Death Star: 1
+- [ ] Credit Card Scammers: 1
+- [ ] Seppuku: 1
+- [ ] Tre: 1
+- [ ] Katana: 1
+- [ ] Geisha: 1
+- [ ] Sumo: 1
+- [ ] CengBox: 2
+- [ ] PowerGrid: 1.0.1
+- [ ] HA: Pandavas
+- [ ] GitRoot: 1
+- [ ] HA: Natraj
+- [ ] Zion: 1.2
+- [ ] DefCon: 1
+- [ ] Glasgow Smile: 1.1
+- [ ] djinn: 3
+- [ ] GainPower: 1
+- [ ] BBS: 1
+- [ ] infovore: 1
+- [ ] My CMSMS: 1
+- [ ] Ganana: 1
+- [ ] sunset: solstice
+- [ ] Vegeta: 1
+- [ ] Presidential: 1
+- [ ] Assertion: 1.0.1
+- [ ] Panabee: 1
+- [ ] eLection: 1
+- [ ] Investigator: 1
+- [ ] sunset: decoy
+- [ ] CyberSploit: 1
+- [ ] Pwned: 1
+- [ ] InfoSec Prep: OSCP
+- [ ] BlackRose: 1
+- [ ] GreenOptic: 1
+- [ ] sunset: twilight
+- [ ] CyberSploit: 2
+- [ ] So Simple: 1
+- [ ] Source: 1
+- [ ] Glasgow Smile: 2
+- [ ] sunset: midnight
+- [ ] Funbox: 1
+- [ ] Photographer: 1
+- [ ] Funbox: Rookie
+- [ ] Healthcare: 1
+- [ ] Cheran: 1
+- [ ] Funbox: Easy
+- [ ] Tiki: 1
+- [ ] Cysec: 1
+- [ ] UnInvited: 1
+- [ ] Star Wars CTF: 1
+- [ ] Hacking Messaih: 1
+- [ ] Potato: 1
+- [ ] sunset: sundown
+- [ ] Cysec: 2
+- [ ] sunset: noontide
+- [ ] backdoored: 1
+- [ ] pyexp: 1
+- [ ] Nyx: 1
+- [ ] Insanity: 1
+- [ ] wpwn: 1
+- [ ] Loly: 1
+- [ ] Legacy: HangTuah
+- [ ] Yone: 1
+- [ ] KB-VULN: 1
+- [ ] WorldCup: 2020
+- [ ] The Planets: Mercury
+- [ ] Funbox: Next Level
+- [ ] Funbox: CTF
+- [ ] Nully Cybersecurity: 1
+- [ ] UnDiscovered: 1.0.1
+- [ ] Funbox: Gamble Hall
+- [ ] Chili: 1
+- [ ] Tomato: 1
+- [ ] Potato (SunCSR): 1
+- [ ] Monitoring: 1
+- [ ] Durian: 1
+- [ ] Cherry: 1
+- [ ] DevContainer: 1
+- [ ] Bizarre Adventure: Sticky Fingers
+- [ ] CewlKid: 1
+- [ ] KB-VULN: 2
+- [ ] Bizarre Adventure: Mrr3b0t
+- [ ] SP: alphonse (v1.3)
+- [ ] Funbox: EasyEnum
+- [ ] FirstBlood: 1
+- [ ] Relevant: 1
+- [ ] HA: Narak
+- [ ] FoxHole: 1.0.1
+- [ ] HA: Forensics
+- [ ] BBS (cute): 1.0.2
+- [ ] dev: 1
+- [ ] aMaze: 1
+- [ ] Boverflow: 1
+- [ ] CengBox: 3
+- [ ] Praying: 1
+- [ ] Cheesey: Cheeseyjack
+- [ ] KB-VULN: 3
+- [ ] HA: Sherlock
+- [ ] TenderFoot: 1
+- [ ] namespaceS0S: 1
+- [ ] FishyMail: 1
+- [ ] Secarmy Village: Grayhat Conference
+- [ ] ColddBox: Easy
+- [ ] HA: Vedas
+- [ ] Warzone: 1
+- [ ] Bizarre Adventure: Joestar
+- [ ] IA: Nemesis (1.0.1)
+- [ ] HackathonCTF: 1
+- [ ] Kira: CTF
+- [ ] M87: 1
+- [ ] Hogwarts: Dobby
+- [ ] Warzone: 2
+- [ ] Shuriken: 1
+- [ ] Masashi: 1
+- [ ] My School: 1
+- [ ] MoneyHeist: Catch Us If You Can
+- [ ] Money Heist: 1.0.1
+- [ ] Odin: 1
+- [ ] Warzone: 3 (Exogen)
+- [ ] Moee: 1
+- [ ] Hogwarts: Bellatrix
+- [ ] Who Wants To Be King: 1
+- [ ] Leeroy: 1
+- [ ] Callme: 1
+- [ ] Netstart: 1
+- [ ] School: 1
+- [ ] Ragnar Lothbrok: 1
+- [ ] LinESC: 1
+- [ ] hackme: 2
+- [ ] Cybox: 1.1
+- [ ] Inferno: 1.1
+- [ ] INO: 1.0.1
+- [ ] DevGuru: 1
+- [ ] Chill Hack: 1
+- [ ] Jetty: 1
+- [ ] y0usef: 1
+- [ ] BlueSky: 1
+- [ ] DriftingBlues: 1
+- [ ] Who Wants To Be King: 2
+- [ ] Gaara: 1
+- [ ] Shuriken: Node
+- [ ] The Office: Doomsday Device
+- [ ] shenron: 1
+- [ ] ICMP: 1
+- [ ] DOUBLE: 1
+- [ ] bassamCTF: 1
+- [ ] XPTO System: 1
+- [ ] DriftingBlues: 2
+- [ ] FinitHicDeo: 1
+- [ ] Black Widow: 1
+- [ ] IA: Tornado
+- [ ] Teuchter Twa: 1
+- [ ] System Failure: 1
+- [ ] Ki: 1
+- [ ] Nasef1: Locating Target
+- [ ] Neobank: 1
+- [ ] Samsara: 1
+- [ ] Insomnia: 1
+- [ ] Finding My Friend: 1
+- [ ] Dr4g0n b4ll: 1
+- [ ] Adroit: 1.0.1
+- [ ] KB-VULN: 4 FINAL
+- [ ] R-temis: 1
+- [ ] SecureCode: 1
+- [ ] Amalthee: 1
+- [ ] MoneyBox: 1
+- [ ] Crossroads: 1
+- [ ] Gigachad: 1
+- [ ] DriftingBlues: 3
+- [ ] DriftingBlues: 5
+- [ ] DriftingBlues: 4
+- [ ] Orasi: 1
+- [ ] NoobBox: 1
+- [ ] Grotesque: 1.0.1
+- [ ] Code: 1
+- [ ] Book-Shelf: 1
+- [ ] hacksudo: 2 (HackDudo)
+- [ ] ColddWorld: Immersion
+- [ ] Wireless: 1
+- [ ] hacksudo: 3
+- [ ] Clover: 1
+- [ ] Grotesque: 2
+- [ ] DriftingBlues: 6
+- [ ] Phineas: 1
+- [ ] hacksudo: aliens
+- [ ] blogger: 1
+- [ ] hacksudo: 1.0.1
+- [ ] shenron: 2
+- [ ] Bluesmoke: devrandom2
+- [ ] BlueMoon: 2021
+- [ ] empty: 1.0.2
+- [ ] DriftingBlues: 7
+- [ ] Wayne Manor: 1
+- [ ] hacksudo: search
+- [ ] shenron: 3
+- [ ] Pylington: 1
+- [ ] Momentum: 1
+- [ ] HarryPotter: Fawkes
+- [ ] HarryPotter: Nagini
+- [ ] Corpvision: 1
+- [ ] Worst Western Hotel: 1
+- [ ] Prime (2021): 2
+- [ ] DriftingBlues: 9 (final)
+- [ ] HarryPotter: Aragog (1.0.2)
+- [ ] hacksudo: FOG
+- [ ] hacksudo: L.P.E.
+- [ ] Coffee Addicts: 1
+- [ ] Funbox: Lunchbreaker
+- [ ] Venom: 1
+- [ ] Cereal: 1
+- [ ] digitalworld.local: VENGEANCE
+- [ ] Hackable: III
+- [ ] The Planets: Venus
+- [ ] Ripper: 1
+- [ ] Funbox: GaoKao
+- [ ] Tech_Supp0rt: 1
+- [ ] hacksudo: ProximaCentauri
+- [ ] VulnCMS: 1
+- [ ] Hackable: II
+- [ ] Midwest: 1.0.1
+- [ ] HackathonCTF: 2
+- [ ] Hacker's Blog: 1
+- [ ] Momentum: 2
+- [ ] Pwn The Tron: 1
+- [ ] doli: 1
+- [ ] DarkHole: 1
+- [ ] Funbox: Under Construction!
+- [ ] Funbox: Scriptkiddie
+- [ ] Hms?: 1
+- [ ] ContainMe: 1
+- [ ] IA: Keyring (1.0.1)
+- [ ] Hack Me Please: 1
+- [ ] Corrosion: 1
+- [ ] Looz: 1
+- [ ] Hacker kid: 1.0.1
+- [ ] Thoth Tech: 1
+- [ ] hacksudo: Thor
+- [ ] Chronos: 1
+- [ ] EvilBox: One
+- [ ] Vulnerable Pentesting Lab Environment: 1
+- [ ] digitalworld.local: snakeoil
+- [ ] Grotesque: 3.0.1
+- [ ] BuffEMR: 1.0.1
+- [ ] DarkHole: 2
+- [ ] Vikings: 1
+- [ ] Deathnote: 1
+- [ ] digitalworld.local: FALL
+- [ ] Beelzebub: 1
+- [ ] doubletrouble: 1
+- [ ] Dripping Blues: 1
+- [ ] Corrosion: 2
+- [ ] digitalworld.local: electrical
+- [ ] Noob: 1
+- [ ] ICA: 1
+- [ ] Thales: 1
+- [ ] Empire: Breakout
+- [ ] Empire: LupinOne
+- [ ] Napping: 1.0.1
+- [ ] Red: 1
+- [ ] The Planets: Earth
+- [ ] Web Machine: (N7)
+- [ ] Jangow: 1.0.1
+- [ ] Matrix-Breakout: 2 Morpheus
+
