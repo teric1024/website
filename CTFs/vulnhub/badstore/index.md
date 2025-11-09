@@ -32,7 +32,7 @@ Used rustscan. `rustscan -a www.badstore.net -r 1-65535 -b 450 -t 4000 --tries 3
 
 Found port 80, 443, 3306 are open.
 Let's visit the website, and input something for searching. We found there's likely a sqli.
-![[badstore_SQL_statement.png]]
+![SQL statement of search bar](badstore_SQL_statement.png)
 
 ## SQLi
 After a simple 1=1 injection, it succeded. Here's the malicious url
@@ -70,14 +70,14 @@ Using `use badstoredb; show tables;` to check all the tables. We found an intere
 ### Password
 Therefore, we can either use the [fogot password function](http://www.badstore.net/cgi-bin/badstore.cgi?action=myaccount) with all the info needed, emali and password hint, or crack the hash.
 Here, I reset the password. One might notice there's no option for black. However, we can use burp to give the value whatever we want.
-![[badstore_forget_password_request.png]]
+![request of forget password](badstore_forget_password_request.png)
 The password changed to "Welcome".
 ### Cookie
 One may notice that the cookie, `SSOid`, is in the form of `<user>:<passwordhash>:<fullname>:<role>`. All of these info can be found in userdb. Therefore, we can login as anyone without knowing their actual password by manipulating cookie.
 Note: Be careful for the newline in the cookie.
 ## Upload Files
 After changing the password of admin, we can login as admin on the supplier login page.
-![[badstore_supplier_portal.png]]
+![supplier portal page with a function of uploading file](badstore_supplier_portal.png)
 Here, a web shell was already to be uploaded. Next, we need to find the path of that uploaded file. 
 Unfortunately, I did not find the path of it. On the virtual machine, the uploaded file is located in `/usr/local/apache/data/uploads`. http://www.badstore.net/data/uploads/shell.php also responded 404.
 
@@ -89,7 +89,7 @@ Unfortunately, I did not find the path of it. On the virtual machine, the upload
 ## High
 ### SQL Injection
 http://www.badstore.net/cgi-bin/badstore.cgi?searchquery=%27+or+1%3D1--+&action=search&x=20&y=17
-![[badstore_SQLi.png]]
+![SQLi in search bar](badstore_SQLi.png)
 
 ---
 # Solving
